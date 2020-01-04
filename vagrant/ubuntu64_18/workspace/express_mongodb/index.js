@@ -10,7 +10,7 @@ const User = require('./models/User');
 const options = { useNewUrlParser: true, useUnifiedTopology: true }
 port = 3000;
 
-mongoose.connect('mongodb://127.0.0.1/test_db', options);
+mongoose.connect('mongodb://tims:Hit135Run@ds019946.mlab.com:19946/ktmethod', options);
 
 const db = mongoose.connection;
 
