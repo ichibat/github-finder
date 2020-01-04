@@ -26,5 +26,15 @@ router.get('/:userID', (req, res) => {
   });
 });
 
+router.delete('/:userID', async (req, res) => {
+  const user = await User.deleteOne({ _id: req.params.userID });
+  res.send(user);
+});
+
+router.patch('/:userID', async (req,res) => {
+  console.log(req.body.age);
+  const user = await User.updateOne({_id: req.params.userID}, {$set:{age:req.body.age}});
+  res.send(user);
+})
 
 module.exports = router;
