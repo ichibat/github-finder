@@ -34,7 +34,6 @@ const [state, dispatch] = useReducer(GithubReducer, initialState);
   });
 };
 
-
 // Get User
 
 // Get Repos
